@@ -14,7 +14,16 @@ public class LoadTexts {
             Emulator.getTexts().register("veto.cmd_closedice.keywordall", "all");
             Emulator.getTexts().register("veto.cmd_closedice.closed", "* Closes %count% dices *");
 
-
+            Emulator.getTexts().register("veto.cmd_pay.keys", "pay;transfer");
+            Emulator.getTexts().register("veto.cmd_pay.incorrect.usage", "Missing arguments for pay command!");
+            Emulator.getTexts().register("commands.description.cmd_pay", ":pay <username> <amount> <currency>");
+            Emulator.getTexts().register("generic.habbo.notfound", "Habbo not found");
+            Emulator.getTexts().register("veto.cmd_pay.self", "You cannot pay yourself, silly!");
+            Emulator.getTexts().register("veto.cmd_pay.invalid_amount", "Invalid amount! Please use a positive value.");
+            Emulator.getTexts().register("veto.cmd_pay.not_enough", "Cannot pay %username%. You don't have %amount% %type%!");
+            Emulator.getTexts().register("veto.cmd_pay.invalid_type", "The currency %type% does not exist!");
+            Emulator.getTexts().register("veto.cmd_pay.received", "%username% has paid you %amount% %type%!");
+            Emulator.getTexts().register("veto.cmd_pay.transferred", "You paid %username% %amount% %type%!");
 
 
 

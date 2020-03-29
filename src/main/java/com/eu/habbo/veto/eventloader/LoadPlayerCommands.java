@@ -9,6 +9,7 @@ public class LoadPlayerCommands {
         try {
             CommandHandler.addCommand(new RollDiceCommand("cmd_rolldice", Emulator.getTexts().getValue("veto.cmd_rolldice.keys").split(";")));
             CommandHandler.addCommand(new CloseDiceCommand("cmd_closedice", Emulator.getTexts().getValue("veto.cmd_closedice.keys").split(";")));
+            CommandHandler.addCommand(new PayCommand("cmd_pay", Emulator.getTexts().getValue("veto.cmd_pay.keys").split(";")));
         } catch (Exception ex) {
             Emulator.getLogging().logErrorLine(ex);
         }

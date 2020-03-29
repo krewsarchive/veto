@@ -61,7 +61,7 @@ public class Veto extends HabboPlugin implements EventListener {
     public static void onEmulatorLoaded(EmulatorLoadedEvent event) throws Exception {
         INSTANCE.checkDatabase();
         loadAll();
-        System.out.println("[" + ANSI_BLUE + "OFFICIAL PLUGIN" + ANSI_WHITE + "] " + "Veto (1.0.0) has officially loaded!");
+        System.out.println("[" + ANSI_BLUE + "OFFICIAL PLUGIN" + ANSI_WHITE + "] " + "Veto (1.0.1) has officially loaded!");
     }
 
     public void checkDatabase() {
@@ -69,6 +69,7 @@ public class Veto extends HabboPlugin implements EventListener {
         reloadPermissions = registerPermission("cmd_rolldice", "'0', '1', '2'", "1", reloadPermissions);
         reloadPermissions = this.registerPermission("cmd_closedice", "'0', '1', '2'", "1", reloadPermissions);
         reloadPermissions = this.registerPermission("acc_closedice_room", "'0', '1', '2'", "2", reloadPermissions);
+        reloadPermissions = this.registerPermission("cmd_pay", "'0', '1', '2'", "2", reloadPermissions);
         if (reloadPermissions)
         {
             Emulator.getGameEnvironment().getPermissionsManager().reload();
