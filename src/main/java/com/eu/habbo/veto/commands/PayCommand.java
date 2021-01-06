@@ -72,11 +72,6 @@ public class PayCommand extends Command
             System.out.println(Emulator.getConfig().getValue("seasonal.currency.names"));
             for (String s : Emulator.getConfig().getValue("seasonal.currency.names").split(";"))
             {
-                System.out.println(s);
-                System.out.println(strings[3]);
-                System.out.println(strings[3].startsWith(s));
-                System.out.println(Math.abs(s.length() - strings[3].length()));
-                System.out.println("----");
                 if (s.equalsIgnoreCase(strings[3]) || (strings[3].startsWith(s) && Math.abs(s.length() - strings[3].length()) < 3))
                 {
                     currency = s;
@@ -85,7 +80,9 @@ public class PayCommand extends Command
                 }
             }
 
-            type = Emulator.getConfig().getInt("seasonal.currency." + currency, -1);
+            if (found) {
+                type = Emulator.getConfig().getInt("seasonal.currency." + currency, -1);
+            }
 
             if (!found || type == -1)
             {
